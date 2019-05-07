@@ -1,3 +1,0 @@
-Shows how to run another command from the same repository
-This technique can be useful to create a "meta package" that installs
-other packages from the same repository.
