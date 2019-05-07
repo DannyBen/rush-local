@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+SELF=${SELF:=ERROR}
+
+echo "What's the nested rush?"
+echo "- SELF: $SELF"

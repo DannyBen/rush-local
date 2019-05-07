@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+cp $SELF/somefile .
+echo "Saved 'somefile' in the current directory"

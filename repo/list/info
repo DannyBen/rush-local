@@ -1,0 +1,6 @@
+Package List (view with 'rush .list')
+
+hello:      Sample 'hello world' package
+bootstrap:  Sample meta package
+download:   Sample package that downloads a file
+

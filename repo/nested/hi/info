@@ -1,0 +1,13 @@
+Shows how to use nested folders
+
+This info file can be accessed by running
+
+  $ rush /nested/hi/info
+
+or
+  
+  $ rush .nested/hi
+
+In order to run the package, use
+
+  $ rush nested/hi

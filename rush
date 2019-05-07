@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+usage() { 
+  printf "Usage:\n"
+  printf "  rush PACKAGE\n"
+  printf "  rush -h | --help\n"
+  printf "  rush -v | --version\n"
+
+  if $LONG_USAGE; then
+    printf "\nParameters:\n"
+    printf "  PACKAGE\n"
+    printf "    The name of a package from the rush repository. supported formats:\n\n"
+    printf "    package\n"
+    printf "      Execute the main package script\n\n"
+    printf "    /package/file\n"
+    printf "      Display the contents of a package file\n"
+    printf "      Use '/package/main' to see the source of the main script\n\n"
+    printf "    .package\n"
+    printf "      Show package info\n"
+    printf "\nEnvironmant Vairbales:\n"
+    printf "  RUSH_PATH\n"
+    printf "    Set the path to the rush repo\n"
+    printf "\nExamples:\n"
+    printf "  rush hello            # execute\n"
+    printf "  rush /hello/main      # show contents of 'main'\n"
+    printf "  rush .hello           # show info\n"
+    printf "\n"
+  fi
+}
+
+find_pack() {
+  PACK=$1
+  if [[ $PACK == /* ]]; then
+    PACK=${PACK:1}
+    file=$PACK
+    CMD=print
+  elif [[ $PACK == .* ]]; then
+    PACK="${PACK:1}/info"
+    file=$PACK
+    CMD=print
+  else
+    file="$PACK/main"
+    CMD=execute
+  fi
+
+  [[ -f "$RUSH_PATH/$file" ]] || die "file not found: $file"
+}
+
+execute() {
+  if [[ $CMD == 'print' ]]; then
+    package_print
+  else
+    package_execute
+  fi
+}
+
+package_print() {
+  cat "$RUSH_PATH/$PACK"
+}
+
+package_execute() {
+  export SELF="$RUSH_PATH/$PACK"
+  bash $SELF/main
+}
+
+attempt_execute() {
+  if [[ $# == 0 ]]; then
+    usage
+  else
+    find_pack "$@"
+    execute "$@"
+  fi
+}
+
+die() {
+  echo "/ rush error: $@"
+  exit 1  
+}
+
+run() {
+  initialize
+
+  case "$1" in
+    -h | --help    ) LONG_USAGE=true; usage ;;
+    -v | --version ) echo $VERSION ;;
+    * ) attempt_execute "$@" ;;
+  esac
+}
+
+initialize() {
+  VERSION="0.1.0"
+  LONG_USAGE=false
+  set -o pipefail
+
+  [[ -n $RUSH_PATH ]] || die "RUSH_PATH is not set"
+}
+
+run "$@"

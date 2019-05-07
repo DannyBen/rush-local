@@ -1,0 +1,14 @@
+language: ruby
+
+rvm:
+  - 2.5.3
+
+before_script: 
+  - gem install bundler
+  - cd test 
+  - bundle
+
+script: bundle exec cucumber
+
+notifications:
+  email: false

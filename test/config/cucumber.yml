@@ -1,0 +1,5 @@
+<%
+  std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} --strict"
+%>
+
+default: -q <%= std_opts %> features

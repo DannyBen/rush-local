@@ -1,0 +1,7 @@
+Package Index for DannyBen
+
+bootstrap        Shows how to run another command from the same repository
+download         Shows how a script can download files from its own folder
+hello            This is a simple example, just to test that rush is connecting
+list             Package List (view with 'rush .list')
+nested/hi        Shows how to use nested folders
