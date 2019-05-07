@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+printf "Package Index ($RUSH_PATH)\n\n"
+cd $RUSH_PATH
+
+for d in **/* *; do
+  infofile="$d/info"
+  [[ -f $infofile ]] && printf "%-16s `head -1 $infofile`\n" $d
+done
