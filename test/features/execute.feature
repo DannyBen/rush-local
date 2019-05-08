@@ -2,7 +2,7 @@ Feature: Execute
 
 Background:
   Given I am in the "../" directory
-    And the variable "RUSH_REPO" is "./repo"
+    And the variable "RUSH_PATH" is "./repo"
 
 Scenario: rush PACKAGE with RUSH_REPO environment
    When I run "./rush hello"

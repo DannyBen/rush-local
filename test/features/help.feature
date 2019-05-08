@@ -2,7 +2,7 @@ Feature: Help
 
 Background:
   Given I am in the "../" directory
-    And the variable "RUSH_REPO" is "./repo"
+    And the variable "RUSH_PATH" is "./repo"
 
 Scenario: Run rush
    When I run "./rush"

@@ -2,7 +2,7 @@ Feature: Index
 
 Background:
   Given I am in the "../" directory
-    And the variable "RUSH_REPO" is "./repo"
+    And the variable "RUSH_PATH" is "./repo"
 
 Scenario: Run rush index
    When I run "./rush index"
