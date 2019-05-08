@@ -49,7 +49,8 @@ execute() {
   if [[ $CMD == 'print' ]]; then
     package_print
   else
-    package_execute
+    shift
+    package_execute "$@"
   fi
 }
 
@@ -59,7 +60,7 @@ package_print() {
 
 package_execute() {
   export SELF="$RUSH_PATH/$PACK"
-  $SELF/main
+  $SELF/main "$@"
 }
 
 attempt_execute() {

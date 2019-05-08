@@ -3,3 +3,5 @@ SELF=${SELF:=ERROR}
 
 echo "What's the rush?"
 echo "- SELF: $SELF"
+echo "- ARGV: $@"
+echo "- ARGC: $#"
