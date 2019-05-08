@@ -59,7 +59,7 @@ package_print() {
 
 package_execute() {
   export SELF="$RUSH_PATH/$PACK"
-  bash $SELF/main
+  $SELF/main
 }
 
 attempt_execute() {
@@ -87,7 +87,7 @@ run() {
 }
 
 initialize() {
-  VERSION="0.1.0"
+  VERSION="0.1.1"
   LONG_USAGE=false
   set -o pipefail
 
