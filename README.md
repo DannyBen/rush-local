@@ -18,7 +18,7 @@ folder rather than from a GitHub repository.
 Install
 --------------------------------------------------
 
-    $ bash <(curl -s https://raw.githubusercontent.com/DannyBen/rush-command/master/setup)
+    $ bash <(curl -s https://raw.githubusercontent.com/DannyBen/rush-local/master/setup)
 
 Or, manually place the [rush](rush) script anywhere in your `PATH`.
 
