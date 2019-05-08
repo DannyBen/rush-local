@@ -1,6 +1,8 @@
 Rush - Linux Workstation Bootstrapper
 ==================================================
 
+ [![Build Status](https://travis-ci.com/DannyBen/rush-local.svg?branch=master)](https://travis-ci.com/DannyBen/rush-local)
+
 ```
 _______                       ______  
 ____  /  ___________  ___________  /_ 
