@@ -29,7 +29,7 @@ Or, manually place the [rush](rush) script anywhere in your `PATH`.
 Usage
 --------------------------------------------------
 
-Step 1: Create a rush repo. You can start with teh sample [repo](/repo) folder.
+Step 1: Create a rush repo. You can start with the sample [repo](/repo) folder.
 
 Step 2: Set `RUSH_PATH` to point to the repo path.
 
