@@ -1,8 +1,14 @@
-Rush - Linux Workstation Bootstrapper
+Rush - Personal Package Manager
 ==================================================
 
 ![Version](https://img.shields.io/badge/version-0.1.2-blue.svg)
 [![Build Status](https://travis-ci.com/DannyBen/rush-local.svg?branch=master)](https://travis-ci.com/DannyBen/rush-local)
+
+### DEPRECATION NOTICE
+
+This repository was merged into the new [Rush CLI][2] and is no longer maintained.
+
+---
 
 ```
 _______                       ______  
@@ -10,7 +16,7 @@ ____  /  ___________  ___________  /_
 ___  /   __  ___/  / / /_  ___/_  __ \
 __  /    _  /   / /_/ /_(__  )_  / / /
 _  /     /_/    \__,_/ /____/ /_/ /_/ 
-/_/      Linux Workstation Bootstrapper
+/_/      Personal Package Manager
 ```
 
 
@@ -56,3 +62,4 @@ Keep this points in mind:
 
 
 [1]: https://github.com/dannyben/rush-command
+[2]: https://github.com/dannyben/rush-cli
